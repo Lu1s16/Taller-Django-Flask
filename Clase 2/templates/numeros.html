@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css", href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+    {% for elem in lista %}
+
+        {% if elem%2 == 0 %}
+
+            <p class="numero"> {{ elem }} </p>
+        
+        {% endif %}
+
+    {% endfor %}
+
+    {% if edad >= 18 %}
+        <p>Si eres una persona mayor de edad</p>
+
+    {% else %}
+        <p>No eres una persona mayor de edad</p>
+
+    {% endif %}
+
+    <img class="imagen" src="{{ url_for('static', filename='img/ardilla.jpg') }}">
+
+    <script type="text/javascript", src="{{ url_for('static', filename='js/app.js') }}"> </script>
+    
+</body>
+</html>
