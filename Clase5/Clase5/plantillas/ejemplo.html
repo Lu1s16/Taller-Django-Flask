@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos personales</title>
+</head>
+<body>
+
+    <p>Mi nombre es: {{ nombre }}</p> <br>
+
+    <p>Mi apellido es: {{ apellido }}</p>
+
+    <p>La fecha de hoy es: {{ fecha.day }}/{{ fecha.month }}/{{ fecha.year }}</p>
+
+    <p>La hora actual es: {{ fecha.hour}}:{{ fecha.minute }}:{{ fecha.second }}</p>
+
+    {% if nombre == "Luis" %}
+
+        <p>El nombre es correcto</p>
+
+    {% else %}
+
+        <p>El nombre es incorrecto</p>
+
+    {% endif %}
+
+    
+
+
+    
+</body>
+</html>
