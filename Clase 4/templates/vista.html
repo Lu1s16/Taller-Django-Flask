@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas</title>
+</head>
+<body>
+    <center>
+        <h1> Mascotas</h1>
+        <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Animal</td>
+                <td>Descripcion</td>
+                <td>Precio</td>
+            </tr>
+
+            {% for mascota in mascotas %}
+
+            <tr>
+                <td>{{ mascota[0] }}</td>
+                <td>{{ mascota[1] }}</td>
+                <td>{{ mascota[2] }}</td>
+                <td>{{ mascota[3] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+        <br>
+
+        <A HREF="http://127.0.0.1:5000/add">Regresar</A>
+
+        <br>
+        <br>
+
+
+        <form action="/eliminar", method="POST">
+            <input type="text", name="id", placeholder="ID"> <br>
+
+            <button>Eliminar</button>
+        </form>
+
+
+    </center>
+    
+
+    
+</body>
+</html>
