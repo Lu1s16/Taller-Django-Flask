@@ -1,0 +1,54 @@
+{% load static %}
+
+<html>
+
+<head>
+
+    <title>Agregar </title>
+    <link rel="stylesheet" href="{% static "agregar.css" %}">
+
+</head>
+
+
+<body>
+
+    <div id="pelicula">
+
+        <center>
+
+            <form action="/add/", method="POST">{% csrf_token %}
+
+                <label>Pelicula</label><br>
+                <input type="text", name="pelicula"> <br>
+                <label>Genero</label><br>
+                <input type="text", name="genero"> <br>
+                <label>Descripcion</label><br>
+                <textarea name="descripcion", rows="5", cols="20"></textarea> <br>
+        
+                <button>Agregar</button>
+        
+            </form>
+        
+            <br>
+        
+            <a href="{% url 'menu' %}">Regresar al menu</a>
+        
+            <p> {{ msg }} </p>
+
+        </center>
+
+        
+
+    </div>
+
+    
+
+    
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+
+<head>
+
+    <title> {{ pelicula.Pelicula }} </title>
+    <link rel="stylesheet" href="{% static "vista.css" %}">
+
+</head>
+
+
+<body>
+
+    <div id="pelicula">
+
+        <label> <b>Nombre:</b> {{ pelicula.Pelicula}} </label> <br>
+        <label> <b>Genero:</b> {{ pelicula.Genero}} </label> <br>
+        <label> <b>Descripcion:</b> {{ pelicula.Descripcion}} </label> <br><br>
+
+
+        <center><a href="{% url "menu" %}">Regresar</a></center>
+
+    <div>
+
+
+
+</body>
+
+
+
+</html>

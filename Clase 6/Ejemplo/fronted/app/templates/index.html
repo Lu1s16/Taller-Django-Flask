@@ -1,0 +1,50 @@
+{% load static %}
+
+<html>
+
+<head>
+    
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static "index.css" %}">
+
+
+</head>
+
+<body>
+
+    <div id="formulario">
+
+        <center>
+
+            <!--action="/login/" buscara la ruta "login/" en el archivo urls.py de app para ejecutar su funcion-->
+            <form action="/login/", method="POST"> {% csrf_token %}
+
+                <label>Usuario</label> <br>
+                <input id="usuario" type="text", name="user"><br>
+                <label>Contraseña</label> <br>
+                <input id="contraseña" type="text", name="password"><br><br>
+    
+                <input type="submit", value="Iniciar sesion">
+    
+            </form>
+    
+    
+            {{ msg }}
+
+
+        </center>
+
+
+       
+
+    </div>
+
+
+</body>
+
+
+</html>
+
+
+{{ Respuesta }}
+

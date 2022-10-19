@@ -1,0 +1,103 @@
+{% load static %}
+<html>
+
+<head>
+
+    <title> Home </title>
+    <link rel="stylesheet" href="{% static "menu.css" %}">
+
+</head>
+
+
+<body>
+
+    
+
+    <!--Tabla-->
+
+
+
+    <div id="peliculas">
+        <center>
+
+            <p>Pagina principal</p>
+
+        <table border="1">
+
+            <tr>
+
+                <td>Pelicula</td>
+                <td>Genero</td>
+                <td>Eliminar</td>
+                <td>Ver individual</td>
+
+            </tr>
+
+            {% for pelicula in peliculas %}
+
+            <tr>
+
+                <td>{{ pelicula.Pelicula }} </td>
+                <td>{{ pelicula.Genero }} </td>
+
+                <td>  
+                    <form action="/delete/{{ pelicula.Pelicula }}", method="POST">{% csrf_token %}
+
+                        <button>Eliminar</button>
+
+                    </form>
+                </td>
+
+                <td>  
+                    <form action="/vista/{{ pelicula.Pelicula }}", method="POST">{% csrf_token %}
+
+                        <button>Ver</button>
+
+                    </form>
+                </td>
+                
+
+            
+            </tr>
+
+
+            {% endfor %}
+
+
+        </table>
+
+        <!-- url "nombre del html" -->
+        <!-- Debe existir en templates y asignarle en urls.py con name="nombre del html" -->
+
+        <a  href="{% url 'agregar' %}"> Agregar </a>
+
+
+        <br>
+
+        {{ msg }}
+
+        </center>
+
+        
+
+    </div>
+
+
+    
+
+    
+
+        
+    
+
+
+
+    
+
+</body>
+
+
+
+</html>
+
+

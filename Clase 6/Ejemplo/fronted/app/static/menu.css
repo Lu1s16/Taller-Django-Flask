@@ -1,0 +1,15 @@
+html{
+    background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2017/03/Captura-de-pantalla-2017-03-30-a-las-11.59.05.png?w=1560&quality=60&strip=all&ssl=1);
+    background-size: cover;
+}
+
+#peliculas{
+    height: 400px;
+    width: 600px;
+    background-color: aquamarine;
+    overflow: scroll;
+    position:absolute;
+    left: 450px;
+    top: 250px;
+
+}
